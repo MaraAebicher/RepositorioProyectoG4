@@ -18,9 +18,11 @@ from django.urls import path, include
 from . import views 
 
 urlpatterns = [
-    path('g4/', views.Grupo4, name = 'primera_vista'),
-]
+    path('', views.Grupo4, name = 'primera_vista'),
+
 
 #PATH QUE APUNTA A APPS
 
-path('Principal/', include('apps.Principal.urls'))
+path('principal/', include('apps.Principal.urls')),
+path('otrosRecursos/', include('apps.OtrosRecursos.urls'))
+]
