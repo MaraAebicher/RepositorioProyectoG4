@@ -23,13 +23,15 @@ from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Grupo4, name = 'primera_vista'),
-
+    #path('', views.Grupo4, name = 'primera_vista'), lo comento por ahora! (Mar)
+    path('', include(('apps.Principal.urls','Principal'))),
 
 #PATH QUE APUNTA A APPS
 
 path('principal/', include('apps.Principal.urls')),
-path('otrosRecursos/', include('apps.OtrosRecursos.urls'))
+path('otrosRecursos/', include('apps.OtrosRecursos.urls')),
+
+
 ]
 
 '''
