@@ -74,7 +74,11 @@
            <div class="col-md-12 col-lg-6">
              <div class="post-entry">
                <span class="post-category text-white bg-success mb-3">{{ principal.categoria | upper }}</span>
+<<<<<<< HEAD
                <h2 class="mb-4"><a href="{% url 'Principal:detalle_post'%}">{{ principal.titulo }}</a></h2>
+=======
+               <h2 class="mb-4"><a href="{% url 'Principal:detalle_post' %}">{{ principal.titulo }}</a></h2>
+>>>>>>> a6882f58f76ffcc2837e5d756b1a1da5f6a6ead2
                <div class="post-meta align-items-center text-left">
                  <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ principal.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
                  <span class="d-inline-block mt-1">Autor: {{ principal.autor }}</span>
@@ -160,7 +164,10 @@
           <div class="entry2 mb-5">
             <a href="{% url 'Principal:detalle_post' %}"><img src="{{ post_extra.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
             <span class="post-category text-white bg-primary mb-3"></span>
+<<<<<<< HEAD
             <h2><a href="{% url 'Principal:detalle_post' %}"></a>{{ post_extra.titulo }}</h2>
+=======
+>>>>>>> a6882f58f76ffcc2837e5d756b1a1da5f6a6ead2
             <div class="post-meta align-items-center text-left clearfix">
               <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post_extra.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
               <span class="d-inline-block mt-1">POR <a href="#">{{ post_extra.autor }}</a></span>
