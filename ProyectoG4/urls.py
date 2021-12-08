@@ -28,19 +28,16 @@ urlpatterns = [
 
 #PATH QUE APUNTA A APPS
 
-path('principal/', include('apps.Principal.urls')),
-path('otrosRecursos/', include('apps.OtrosRecursos.urls')),
+#path('OtrosRecursos/', include('apps.OtrosRecursos.urls')), Estoy probando algo, lo comento tambien por ahora :) (Mar)
 
 
 ]
 
-'''
+
 if settings.DEBUG:
     urlpatterns += [
-        re_path(r'^media/(?P<path>*)$', serve , 
-            {
-
+        re_path(r'^media/(?P<path>.*)$', serve , {
             'document_root':settings.MEDIA_ROOT,
         }),
     ]
-'''
+

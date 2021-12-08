@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class LandingpageprincipalConfig(AppConfig):
-    name = 'LandingPagePrincipal'
+class PrincipalConfig(AppConfig):
+    name = 'principal'
