@@ -15,7 +15,7 @@ class ModeloBase(models.Model):
 
 class Categoria(ModeloBase):
 	nombre = models.CharField('Nombre de la categoría', max_length = 100, unique = True)
-	imagen_referencial = models.ImageField('Imagen referencial', upload_to = 'categoria/')
+	imagen_referencial = models.ImageField('Imagen referencial', upload_to = 'images/')
 
 	class Meta:
 		verbose_name = 'Categoría'
@@ -50,7 +50,7 @@ class Post(ModeloBase):
 	autor = models.ForeignKey(Autor, on_delete = models.CASCADE)
 	categoria = models.ForeignKey(Categoria, on_delete = models.CASCADE)
 	contenido = RichTextField()
-	imagen_referencial = models.ImageField('Imagen referencial', upload_to = 'imagenes/', max_length = 255)
+	imagen_referencial = models.ImageField('Imagen referencial', upload_to = 'images/', max_length = 255)
 	publicado = models.BooleanField('Publicado / No publicado', default = False)
 	fecha_publicación = models.DateField('Fecha de publicación')
 

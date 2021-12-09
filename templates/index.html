@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
  <head>
    <title>{% block titulo %}17 ODS{% endblock titulo %}</title>
    <meta charset="utf-8">
@@ -152,23 +152,23 @@
              <p>{{ post_ODS.descripcion }}</p>
            </div>
         </div>
-        <div class="col-lg-6 mb-6 mb-lg-6">
-          <div class="section-heading mb-5 d-flex align-items-center">
-            <h2>{{ post_extra.categoria | upper }}</h2>
-            <div class="ml-auto"><a href="{% url 'Principal:post_extra' %}" class="view-all-btn">VER TODOS</a></div>
-          </div>
-          <div class="entry2 mb-5">
-            <a href="{% url 'Principal:detalle_post' post_ODS %}"><img src="{{ post_extra.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
-            <span class="post-category text-white bg-primary mb-3"></span>
-            <h2><a href="{% url 'Principal:detalle_post' post_extra %}"></a>{{ post_extra.titulo }}</h2>
-            <div class="post-meta align-items-center text-left clearfix">
-              <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post_extra.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
-              <span class="d-inline-block mt-1">POR <a href="#">{{ post_extra.autor }}</a></span>
-              <span>{{ post_extra.fecha_publicacion }}</span>
-            </div>
-            <p>{{ post_extra.descripcion }}</p>
-          </div>
-       </div>
+         <div class="col-lg-6 mb-6 mb-lg-6">
+           <div class="section-heading mb-5 d-flex align-items-center">
+             <h2>{{ post_extra.categoria | upper }}</h2>
+             <div class="ml-auto"><a href="{% url 'Principal:post_extra' %}" class="view-all-btn">VER TODOS</a></div>
+           </div>
+           <div class="entry2 mb-5">
+             <a href="{% url 'Principal:detalle_post' post_extra  %}"><img src="{{ post_extra.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
+             <span class="post-category text-white bg-primary mb-3"></span>
+             <h2><a href="{% url 'Principal:detalle_post' post_extra %}"></a>{{ post_extra.titulo }}</h2>
+             <div class="post-meta align-items-center text-left clearfix">
+               <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post_extra.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
+               <span class="d-inline-block mt-1">POR <a href="#">{{ post_extra.autor }}</a></span>
+               <span>{{ post_extra.fecha_publicacion }}</span>
+             </div>
+             <p>{{ post_extra.descripcion }}</p>
+           </div>
+        </div>
        </div>
      </div>
    </div>
