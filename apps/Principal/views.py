@@ -6,6 +6,7 @@ from ProyectoG4.settings.base import EMAIL_HOST_USER
 from .models import Post,Categoria,RedesSociales,Web,Suscriptor
 from .utils import *
 from .forms import ContactoForm
+from django.utils.text import slugify
 
 
 class Inicio(ListView):

@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
-{% load staticfiles %}
-{% block titulo %} {{ categoria |upper }} | BLOG.DEV {% endblock titulo %}
+{% load static %}
+{% block titulo %} {{ categoria |upper }} | BLOG ODS {% endblock titulo %}
 
 {% block cuerpo %}
     <div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url({{ categoria.imagen_referencial.url }});">
@@ -24,9 +24,9 @@
           <div class="col-md-12 col-lg-12 main-content">
             {% for post in posts %}
               <div class="entry2 mb-5">
-                <a href="{% url 'base:detalle_post' post.slug %}"><img src="{{ post.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
+                <a href="{% url 'Principal:detalle_post' post.slug %}"><img src="{{ post.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
                 <span class="post-category text-white bg-primary mb-3">{{ post.categoria }}</span>
-                <h2><a href="{% url 'base:detalle_post' post.slug %}">{{ post.titulo }}</a></h2>
+                <h2><a href="{% url 'Principal:detalle_post' post.slug %}">{{ post.titulo }}</a></h2>
                 <div class="post-meta align-items-center text-left clearfix">
                   <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
                   <span class="d-inline-block mt-1">POR <a href="#">{{ post.autor }}</a></span>
