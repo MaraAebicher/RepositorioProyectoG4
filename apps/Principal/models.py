@@ -29,6 +29,7 @@ class Autor(ModeloBase):
 	apellidos = models.CharField('Apellidos', max_length = 120)
 	email = models.EmailField('Correo electrónico', max_length = 200)
 	descripcion = models.TextField('Descripción')
+	imagen_referencial = models.ImageField('Imagen referencial', null = True, blank = True, upload_to = 'autores/')
 	web = models.URLField('Web', null = True, blank = True)
 	facebook = models.URLField('Facebook', null = True, blank = True)
 	twitter = models.URLField('Twitter', null = True, blank = True)
