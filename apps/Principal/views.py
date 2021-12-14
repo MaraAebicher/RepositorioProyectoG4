@@ -98,7 +98,7 @@ class DetallePost(DetailView):
                 estado = True,
                 publicado = True,
                 ).values_list('id',flat = True))
-
+        posts.remove(post.id)
         post1 = random.choice(posts)
         posts.remove(post1)
         post2 = random.choice(posts)
