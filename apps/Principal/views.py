@@ -34,7 +34,7 @@ class Inicio(ListView):
                                 estado = True,
                                 publicado = True,
                                 categoria = Categoria.objects.get(nombre = 'Información extra')
-                                ).latest('fecha_publicacion')
+                                ).latest('fecha_publicación')
         except:
             post_extra = None
 
@@ -43,7 +43,7 @@ class Inicio(ListView):
                             estado = True,
                             publicado = True,
                             categoria = Categoria.objects.get(nombre = 'ODS')
-                            ).latest('fecha_publicacion')
+                            ).latest('fecha_publicación')
         except:
             post_ODS = None
 

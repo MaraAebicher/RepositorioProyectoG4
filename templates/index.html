@@ -1,6 +1,7 @@
 {% load static %}
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
  <head>
    <title>{% block titulo %}17 ODS{% endblock titulo %}</title>
    <meta charset="utf-8">
@@ -141,9 +142,9 @@
              <div class="ml-auto"><a href="{% url 'Principal:post_ODS' %}" class="view-all-btn">VER TODOS</a></div>
            </div>
            <div class="entry2 mb-5">
-             <a href="{% url 'Principal:detalle_post' post_ODS  %}"><img src="{{ post_ODS.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
+             <a href="{% url 'Principal:detalle_post' post_ODS.slug  %}"><img src="{{ post_ODS.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
              <span class="post-category text-white bg-primary mb-3"></span>
-             <h2><a href="{% url 'Principal:detalle_post' post_ODS %}"></a>{{ post_ODS.titulo }}</h2>
+             <h2><a href="{% url 'Principal:detalle_post' post_ODS.slug %}"></a>{{ post_ODS.titulo }}</h2>
              <div class="post-meta align-items-center text-left clearfix">
                <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post_ODS.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
                <span class="d-inline-block mt-1">POR <a href="#">{{ post_ODS.autor }}</a></span>
@@ -158,9 +159,9 @@
              <div class="ml-auto"><a href="{% url 'Principal:post_extra' %}" class="view-all-btn">VER TODOS</a></div>
            </div>
            <div class="entry2 mb-5">
-             <a href="{% url 'Principal:detalle_post' post_extra  %}"><img src="{{ post_extra.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
+             <a href="{% url 'Principal:detalle_post' post_extra.slug  %}"><img src="{{ post_extra.imagen_referencial.url }}" alt="Image" class="img-fluid rounded"></a>
              <span class="post-category text-white bg-primary mb-3"></span>
-             <h2><a href="{% url 'Principal:detalle_post' post_extra %}"></a>{{ post_extra.titulo }}</h2>
+             <h2><a href="{% url 'Principal:detalle_post' post_extra.slug %}"></a>{{ post_extra.titulo }}</h2>
              <div class="post-meta align-items-center text-left clearfix">
                <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ post_extra.autor.imagen_referencial.url }}" alt="Image" class="img-fluid"></figure>
                <span class="d-inline-block mt-1">POR <a href="#">{{ post_extra.autor }}</a></span>
@@ -201,7 +202,7 @@
            </div>
 
            <div>
-             <h3 class="footer-heading mb-4">Contáctanos<i class="icon-heart text-danger" aria-hidden="true"></i></h3>
+             <h3 class="footer-heading mb-4">¡Síguenos en nuestras redes!<i class="icon-heart text-danger" aria-hidden="true"></i></h3>
              <p>
                <a href="{{ sociales.facebook }}" target="_blank"><span class="icon-facebook pt-2 pr-2 pb-2 pl-0"></span></a>
                <a href="{{ sociales.twitter }}" target="_blank"><span class="icon-twitter p-2"></span></a>
@@ -213,7 +214,7 @@
        <div class="row">
          <div class="col-12 text-center">
            <p>
-             <i class="icon-heart text-danger" aria-hidden="true"></i> This template is made with </i><a href="https://colorlib.com" target="_blank" >Colorlib</a><i class="icon-heart text-danger" aria-hidden="true"></i>
+             <i class="icon-heart text-danger" aria-hidden="true"></i> This template is made with by </i><a href="https://colorlib.com" target="_blank" >Colorlib</a><i class="icon-heart text-danger" aria-hidden="true"></i>
              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
              </p>
          </div>
